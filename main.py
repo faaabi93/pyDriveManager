@@ -44,6 +44,8 @@ def clicked3():
 
 def copy_command():
     increment = 100/num_files
+    global button_active
+    button_active = Flase
     print(increment)
     for file in files:
         currentfilelbl.configure(text=file)
@@ -69,6 +71,7 @@ def copy_command():
         window.update()
     currentfilelbl.configure(text="All files copied")
     bar["value"] = 100
+    button_active = True
 
 
 imgdirlbl = tk.Label(frame2, text="Imgdir")
